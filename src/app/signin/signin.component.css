@@ -1,0 +1,13 @@
+.div-background{
+    background-color: rgba(213,228,217,1);
+}
+.formulario{
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+.titulo{
+    font-family: 'Amatic SC';
+}

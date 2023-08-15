@@ -1,0 +1,128 @@
+<section class="container mt-5 mb-5">
+    <section class="row">
+
+        <section class="row justify-content-center">
+                
+            <section class=" col-12 col-md-10 text-center text-md-start">
+                <h1>ResidUV | Registrarse</h1>
+            </section>
+            
+            <section class="row justify-content-center">
+                <section class="col-12 col-md-10 mt-5">
+                    <h3>Datos Personales</h3>
+                    <hr>
+                    <section class="row mt-2">
+                        <div class="form-group col-12 col-md-5 mt-2">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control mt-2" placeholder="Nombre" [(ngModel)]="user.nombres">
+                        </div>
+                        <div class="form-group offset-md-1 col-12 col-md-5 mt-2">
+                            <label>Apellido Paterno</label>
+                            <input type="text" class="form-control mt-2" placeholder="Apellido Paterno" [(ngModel)]="user.apepat">
+                        </div>
+                    </section>
+                    <section class="row mt-2"> 
+                        <div class="form-group col-12 col-md-5 mt-2">
+                            <label>Apellido Materno</label>
+                            <input type="text" class="form-control mt-2" placeholder="Apellido Materno" [(ngModel)]="user.apemat">
+                        </div>
+                        <div class="form-group offset-md-1 col-12 col-md-5 mt-2">
+                            <label>Matrícula</label>
+                            <input type="text" class="form-control mt-2" placeholder="Matrícula" [(ngModel)]="user.username">
+                        </div>
+                    </section>
+                </section>
+            </section>
+
+            <section class="row justify-content-center">
+                <section class="col-12 col-md-10 mt-5">
+                    <h3>Datos Académicos</h3>
+                    <hr>
+                    <section class="row mt-2">
+                        <div class="form-group col-12 col-md-5 mt-2">
+                            <label>Región</label>
+                            <select class="col-12 col-md-5 form-control mt-2 custom-select" id="inlineFormCustomSelect" [(ngModel)]="user.region">
+                                <option selected>Región</option>
+                                <option value="Córdoba-Orizaba">Córdoba-Orizaba</option>
+                                <option value="Coatzacoalcos-Minatitlán">Coatzacoalcos-Minatitlán</option>
+                                <option value="Tuxpan-Poza Rica">Tuxpan-Poza Rica</option>
+                                <option value="Veracruz">Veracruz</option>
+                                <option value="Xalapa">Xalapa</option>
+                            </select>
+                        </div>
+                        <div class="offset-md-1 form-group col-12 col-md-5 mt-2">
+                            <label>Facultad</label>
+                            <input class="col-6 col-md-5 form-control mt-2 custom-select" id="inlineFormCustomSelect" [(ngModel)]="user.facultad">
+                        </div>
+                    </section>
+                    <section class="row mt-2">
+                        <div class="form-group col-12 col-md-5 mt-2">
+                            <label>Programa Educativo</label>
+                            <input type="text" class="form-control mt-2" placeholder="Programa educativo" [(ngModel)]="user.programa_educativo">
+                        </div>
+                        <div class="offset-md-1 form-group col-12 col-md-5 mt-2">
+                            <label>Semestre</label>
+                            <input type="number" class="form-control mt-2" placeholder="Semestre" [(ngModel)]="user.semestre">
+                        </div>
+                    </section>
+
+                </section>
+            </section>
+
+            <section class="row justify-content-center">
+                <section class="col-12 col-md-10 mt-5">
+                    <h3>Contraseña</h3>
+                    <hr>
+                    <section class="row mt-2">
+                        <div class="form-group col-12 col-md-5 mt-2">
+                            <label>Contraseña</label>
+                            <div class="mt-2">
+                                <input type="password" class="form-control" id="Password1" placeholder="Contraseña" [(ngModel)]="user.password">
+                            </div>
+                        </div>
+                        <div class="offset-md-1 form-group col-12 col-md-5 mt-2">
+                            <label>Verifica tu Contraseña</label>
+                            <div class="mt-2">
+                                <input type="password" class="form-control" id="Password2" placeholder="Contraseña" [(ngModel)]="password">
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            
+            <section class="row justify-content-center">
+                <section class="col-12 col-md-10 mt-5">
+                    <h3>Pregunta de seguridad</h3>
+                    <hr>
+                    <section class="row mt-2">
+                        <div class="form-group col-12 col-md-11 mt-2">
+                            <label>Pregunta de Seguridad</label>
+                            <select class="col-12 col-md-5 form-control mt-2 custom-select" id="inlineFormCustomSelect" [(ngModel)]="user.preguntaid">
+                                <option selected>Pregunta</option>
+                                <option value="1">¿Cuál era tu maestra favorita de la primaria?</option>
+                                <option value="2">¿Cómo se llamó tu primera mascota?</option>
+                                <option value="3">¿Quién es tu primo favorito?</option>
+                                <option value="4">¿Cuál es tu comida favorita?</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 col-md-11 mt-2">
+                            <label>Respuesta</label>
+                            <input type="text" class="form-control mt-2" placeholder="Nombre" [(ngModel)]="user.respuesta">
+                        </div>
+                    </section>
+                </section>
+            </section>
+
+            <section class="row justify-content-center">
+                <section class="col-12 col-md-10 mt-5 d-flex">
+                    <button type="button" class="btn btn-primary" (click)="registrar()">Registrarse</button>
+                    <a routerLink="/login" class="ms-3">¿Ya tienes una cuenta? Inicia Sesión</a>
+                </section>
+            </section>
+
+        </section>
+
+
+
+    </section>
+</section>
